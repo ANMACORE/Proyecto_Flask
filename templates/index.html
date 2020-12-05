@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Amortizacion</title>
+    </head>
+    <body>
+        <form method="POST">
+            <input type="number" name="valor"> 
+            <input type="number" name="interes">
+            <input type="number" name="tiempo">
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
+        <h1>{{ mytitle }}</h1>  
+        <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+            <tr> 
+                <th>
+                    Mes
+                </th>
+                <th>
+                    Deuda Inicial $
+                </th>
+                <th>
+                    Interes Generado $
+                </th>
+                <th>
+                    Amortizacion $
+                </th>
+                <th>
+                    Valor a pagar $
+                </th>
+                <th>
+                    Deuda Final $
+                </th>
+            </tr>
+            {% for item in lista_amortizacion %}
+            <tr>
+                <td>
+                    {{ item['Mes'] }} 
+               </td>                
+               <td>
+                    {{ item['Deuda Inicial $'] }} 
+                </td>            
+                <td>
+                     {{ item['Interes Generado $'] }} 
+                 </td>
+                 <td>
+                    {{ item['Amortizacion $'] }} 
+               </td>                
+               <td>
+                    {{ item['Valor a pagar $'] }} 
+                </td>            
+                <td>
+                     {{ item['Deuda Final $'] }} 
+                 </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </body>
+</html>  
